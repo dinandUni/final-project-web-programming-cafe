@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include('../../config/constants.php');?>
 <html>
     <head>
         <title>Food Order Website - Home Page</title>
