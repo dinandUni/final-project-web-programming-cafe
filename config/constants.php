@@ -1,7 +1,7 @@
 <?php 
     session_start();
 
-    define('SITEURL', 'http://localhost/final-project-web-programming-cafe-main/');
+    define('SITEURL', 'http://localhost/final-project-web-programming-cafe/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
