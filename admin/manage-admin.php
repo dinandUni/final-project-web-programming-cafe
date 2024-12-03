@@ -5,7 +5,17 @@
     <div class="wrapper">
         <h1>Manage Admin</h1>
 
-        <br /><br />
+        <br />
+
+        <?php 
+            if(isset($_SESSION['add']))
+            {
+                echo $_SESSION['add']; //Tampilkan Notifikasi
+                unset($_SESSION['add']); //Hapus Notifikasi
+            }
+        ?>
+
+        <br><br><br>
 
         <!-- Button add Admin -->
         <a href="add-admin.php" class="btn-primary">Add Admin</a>
@@ -20,35 +30,46 @@
                 <th>Actions</th>
             </tr>
 
-            <tr>
-                <td>1. </td>
-                <td>Gamaliel</td>
-                <td>Abiezer</td>
-                <td>
-                    <a href="#" class="btn-secondary">Update Admin</a>
-                    <a href="#" class="btn-danger">Delete Admin</a>
-                </td>
-            </tr>
+            <?php
+                //Query buat ambil data semua Admin
+                $sql = "SELECT * FROM tbl_admin";
+                //Execute query
+                $res = mysqli_query($conn, $sql);
 
-            <tr>
-                <td>2. </td>
-                <td>Cindy</td>
-                <td>Kebo</td>
-                <td>
-                    <a href="#" class="btn-secondary">Update Admin</a>
-                    <a href="#" class="btn-danger">Delete Admin</a>
-                </td>
-            </tr>
+                //Cek Query
+                if($res==TRUE)
+                {
+                    $count = mysqli_num_rows($res);
+                    
+                    if($count>0)
+                    {
+                        while($rows = mysqli_fetch_assoc($res))
+                        {
+                            $id=$rows['id'];
+                            $full_name=$rows['full_name'];
+                            $username=$rows['username'];
 
-            <tr>
-                <td>3. </td>
-                <td>Eric</td>
-                <td>Tantrum</td>
-                <td>
-                    <a href="#" class="btn-secondary">Update Admin</a>
-                    <a href="#" class="btn-danger">Delete Admin</a>
-                </td>
-            </tr>
+                            ?>
+                                <tr>
+                                    <td><?php echo $id ;?> </td>
+                                    <td><?php echo $full_name; ?></td>
+                                    <td><?php echo $username; ?></td>
+                                    <td>
+                                        <a href="#" class="btn-secondary">Update Admin</a>
+                                        <a href="#" class="btn-danger">Delete Admin</a>
+                                    </td>
+                                </tr>
+
+                            <?php
+
+                        }
+                    }
+                    else
+                    {
+
+                    }
+                }
+            ?>
         </table>
 
     </div>
