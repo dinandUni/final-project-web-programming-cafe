@@ -191,4 +191,4 @@ include('part/menu.php');
     </div>
 </div>
 
-<?php include('part/footer.php');?>fix anfd give the full code
+<?php include('part/footer.php');?>

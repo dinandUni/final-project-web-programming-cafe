@@ -23,7 +23,7 @@
             $remove = unlink($path);
 
             //Check whether the image is removed or not
-            if($remove==else){
+            if($remove==false){
                 //Failed to Remove image
                 $_SESSION['upload'] = "<div class='eror'>Failed to Remove Image File.</div>";
                 //Redirect to Manage Food
@@ -55,6 +55,6 @@
         //Redirect to Manage Food Page
         // echo "Redirect";
         $_SESSION['unauthorize'] = "<div class=''error>Unauthorized Access.</div>";
-        header('location:'.SETEURL.'admin/manage-food.php');
+        header('location:'.SITEURL.'admin/manage-food.php');
     }
 ?>
