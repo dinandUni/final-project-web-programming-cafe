@@ -31,7 +31,7 @@
         <h1>Update Food</h1>
         <br><br>
 
-        <form action="" me""thod="POST" enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             <table class="tbl-30">
 
             <tr>
@@ -165,7 +165,7 @@
                         $dest_path = "../images/food/".$image_name;//Destination Path
 
                         //Upload the image
-                        $upload = move_uploaded_file($src_path, $dest_path;
+                        $upload = move_uploaded_file($src_path, $dest_path);
 
                         //Check whether the image is uploaded or not
                         if($upload=false){
