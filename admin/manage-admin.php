@@ -19,6 +19,12 @@
                 echo $_SESSION['delete']; 
                 unset($_SESSION['delete']); 
             }
+
+            if (isset($_SESSION['update'])) 
+            {
+                echo $_SESSION['update']; 
+                unset($_SESSION['update']); 
+            }
         ?>
 
         <br><br><br>
@@ -59,7 +65,7 @@
 
                             ?>
                                 <tr>
-                                    <td><?php echo $sn++ ;?> </td>
+                                    <td><?php echo $sn++; ?> </td>
                                     <td><?php echo $full_name; ?></td>
                                     <td><?php echo $username; ?></td>
                                     <td>
