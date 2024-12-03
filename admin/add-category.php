@@ -17,7 +17,7 @@
             unset($_SESSION['upload']);
         }
         ?>
-        
+
         <br><br>
 
         <form action="" method="POST" enctype="multipart/form-data">
@@ -77,27 +77,28 @@
                 $active = "No";
             }
 
-            if(isset($_FILES['image']['name'])) {
+            if (isset($_FILES['image']['name'])) {
                 $image_name = $_FILES['image']['name'];
 
-                // auto rename nama file foto
-                $ext = end(explode('.', $image_name));
-                $image_name = "Category_".rand(000, 999).'.'.$ext;
+                if ($image_name != "") {
 
-                $source_path = $_FILES['image']['tmp_name'];
-                $destination_path = "../images/category/".$image_name;
+                    // auto rename nama file foto
+                    $ext = end(explode('.', $image_name));
+                    $image_name = "Category_" . rand(000, 999) . '.' . $ext;
 
-                $upload = move_uploaded_file($source_path, $destination_path);
+                    $source_path = $_FILES['image']['tmp_name'];
+                    $destination_path = "../images/category/" . $image_name;
 
-                if( $upload == false) {
-                    $_SESSION['upload'] = "<div class='error'>Failed to Upload Image.</div>";
-                    header('location:'.SITEURL.'admin/add-category.php');
-                    die();
+                    $upload = move_uploaded_file($source_path, $destination_path);
 
+                    if ($upload == false) {
+                        $_SESSION['upload'] = "<div class='error'>Failed to Upload Image.</div>";
+                        header('location:' . SITEURL . 'admin/add-category.php');
+                        die();
+                    }
                 }
             } else {
                 $image_name = "";
-
             }
 
             // query insert data

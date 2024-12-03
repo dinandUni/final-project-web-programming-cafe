@@ -41,7 +41,7 @@ include('part/menu.php');
                 <tr>
                     <td>Select Image</td>
                     <td>
-                        <input type="file" name="image">
+                        <input type="file" name="image_name">
                     </td>
                 </tr>
 
@@ -76,8 +76,8 @@ include('part/menu.php');
                                 }
                             ?>
 
-                            <option value="1">Food</option>
-                            <option value="2">Snack</option>
+                            <!-- <option value="1">Food</option>
+                            <option value="2">Snack</option> -->
                         </select>
                     </td>
                 </tr>
@@ -107,7 +107,7 @@ include('part/menu.php');
 
         <?php 
             // cek apakah tombol submit sudah ditekan atau belum
-            if(isset($_POST['sumbit'])){
+            if(isset($_POST['submit'])){
                 // masukin ke database
                 // 1. ambil data data form
                 $title = $_POST['title'];
@@ -133,8 +133,8 @@ include('part/menu.php');
                 }
 
                 // 2. masukin foto kalo di masukin
-                if(isset($_FILES['image']['name'])){
-                    $image_name = $_FILES['image']['name'];
+                if(isset($_FILES['image_name']['name'])){
+                    $image_name = $_FILES['image_name']['name'];
 
                     // upload foto hanya jika ada foto yang di upload
                     if($image_name != ""){
@@ -143,7 +143,7 @@ include('part/menu.php');
                         // rename the image
                         $image_name = "Food_Name_".rand(0000, 9999).'.'.$ext;
 
-                        $source_path = $_FILES['image']['tmp_name'];
+                        $source_path = $_FILES['image_name']['tmp_name'];
 
                         $destination_path = "../images/food/".$image_name;
 
@@ -191,4 +191,4 @@ include('part/menu.php');
     </div>
 </div>
 
-<?php include('part/footer.php');?>
+<?php include('part/footer.php');?>fix anfd give the full code
