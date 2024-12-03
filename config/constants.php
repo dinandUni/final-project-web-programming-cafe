@@ -2,7 +2,7 @@
 
     // Database connection constants
     define('LOCALHOST', 'localhost');
-    define('DB_USERNAME', 'root'); // Corrected typo
+    define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
     define('DB_NAME', 'food-order');
 
