@@ -75,7 +75,7 @@
             full_name = '$full_name',
             username = '$username'
             WHERE id = '$id'
-        ";  
+        ";
 
         //Execute
         $res = mysqli_query($conn, $sql);
