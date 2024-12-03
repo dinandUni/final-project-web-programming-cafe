@@ -1,14 +1,16 @@
 <?php 
+    session_start();
 
-    // Database connection constants
+    define('SITEURL', 'http://localhost/food-order/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
-    define('DB_NAME', 'food-order');
+    define('DB_NAME', 'tr_cafe');
 
-    // Connect to database with error handling
-    $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD) or die(mysqli_error($conn));
-    $db_select = mysqli_select_db($conn, DB_NAME) or die(mysqli_error($conn));
-    
-    
+    $conn = mysqli_connect(LOCALHOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+    if (!$conn) {
+        error_log("Connection failed: " . mysqli_connect_error(), 3, 'error_log.txt');
+        die("Connection failed. Please try again later.");
+    }
 ?>
