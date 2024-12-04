@@ -1,9 +1,8 @@
 <?php 
     include('../config/constants.php');
 
-    // cek apakah id dan image_name sudah di set atau belum
     if(isset($_GET['id']) AND isset($_GET['image'])){
-        // get the value and delete
+
         $id = $_GET['id'];
         $image_name = $_GET['image'];
 
