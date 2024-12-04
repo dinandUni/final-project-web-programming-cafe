@@ -2,6 +2,8 @@
 
 <div class="main-content">
     <div class = "wrapper">
+        <br><br>
+
         <h1>Update Admin</h1>
         
         <br><br>

@@ -1,145 +1,168 @@
-*
-{
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.wrapper
-{
-    padding: 1%;
-    width: 80%;
-    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-.text-center
-{
+body {
+    background-color: #fefbf6; /* Soft cream background */
+    color: #4e342e; /* Warm brown text */
+}
+
+/* Wrapper */
+.wrapper {
+    padding: 2%;
+    width: 85%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Text Alignment */
+.text-center {
     text-align: center;
 }
 
-.clearfix
-{
+/* Utility Classes */
+.clearfix {
     float: none;
     clear: both;
 }
 
-.tbl-full
-{
+/* Tables */
+.tbl-full {
     width: 100%;
-    
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
-.tbl-30
-{
+.tbl-30 {
     width: 30%;
 }
 
-table tr th
-{
-    border-bottom: 1px solid black;
-    padding: 1%;
+table tr th, table tr td {
+    padding: 1rem;
+    border-bottom: 1px solid #d7ccc8;
     text-align: left;
 }
 
-table tr td
-{
-    padding: 1%;
+table tr th {
+    background-color: #8d6e63; /* Subtle brown */
+    color: white;
 }
 
-.btn-primary
-{
-    background-color: #1e90ff;
-    padding: 1%;
+table tr:hover td {
+    background-color: #f3e5f5; /* Soft lavender */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff7043; /* Soft orange */
+    padding: 0.8rem 1.5rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover
-{
-    background-color: #3742fa;
+.btn-primary:hover {
+    background-color: #d84315;
 }
 
-.btn-secondary
-{
-    background-color: #7bed9f;
-    padding: 1%;
+.btn-secondary {
+    background-color: #66bb6a; /* Soft green */
+    padding: 0.8rem 1.5rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.btn-secondary:hover
-{
-    background-color: #2ed573;
+.btn-secondary:hover {
+    background-color: #388e3c;
 }
 
-.btn-danger
-{
-    background-color: #ff6b81;
-    padding: 1%;
+.btn-danger {
+    background-color: #ef5350; /* Soft red */
+    padding: 0.8rem 1.5rem;
     color: white;
     text-decoration: none;
     font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.btn-danger:hover
-{
-    background-color: #ff4757;
+.btn-danger:hover {
+    background-color: #b71c1c;
 }
 
-.success
-{
-    color: #2ed573;
-}
-.error
-{
-    color: #ff4757;
+/* Status Indicators */
+.success {
+    color: #388e3c; /* Green */
 }
 
-/* CSS Menu*/
-.menu
-{
-    border-bottom: 1px solid grey;
+.error {
+    color: #b71c1c; /* Red */
 }
-.menu ul
-{
+
+/* Menu Styles */
+.menu {
+    background-color: #8d6e63; /* Warm brown */
+    border-bottom: 2px solid #5d4037;
+    padding: 1rem 0;
+}
+
+.menu ul {
     list-style-type: none;
+    text-align: center;
+    padding: 0;
 }
-.menu ul li
-{
+
+.menu ul li {
     display: inline;
-    padding: 1%;
+    margin: 0 1rem;
 }
-.menu ul li a
-{
+
+.menu ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: #ff6b81;
-}
-.menu ul li a:hover
-{
-    color: #ff4757;
+    color: white;
+    transition: color 0.3s ease;
 }
 
-/* CSS Main */
-.main-content
-{
-    background-color: #f1f2f6;
-    padding: 3% 0;
+.menu ul li a:hover {
+    color: #ffcc80; /* Soft orange */
 }
 
-.col-4
-{
+/* Main Content */
+.main-content {
+    background-color: #fff3e0; /* Soft peach */
+    padding: 4% 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Column Layout */
+.col-4 {
     width: 18%;
     background-color: white;
     margin: 1%;
     padding: 2%;
     float: left;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* CSS Footer */
-.footer
-{
-    background-color: #ff4757;
+/* Footer */
+.footer {
+    background-color: #5d4037; /* Dark brown */
     color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
 }

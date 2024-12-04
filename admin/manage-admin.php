@@ -27,7 +27,7 @@
             }
         ?>
 
-        <br><br><br>
+        <br>
 
         <!-- Button add Admin -->
         <a href="add-admin.php" class="btn-primary">Add Admin</a>

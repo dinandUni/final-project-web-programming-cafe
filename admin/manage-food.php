@@ -4,7 +4,7 @@
     <div class="wrapper">
         <h1>Manage Food</h1>
 
-        <br /><br />
+        <br />
 
         <?php
         if (isset($_SESSION['upload'])) {
@@ -18,7 +18,7 @@
         }
         ?>
 
-        <br /><br />
+        <br />
 
         <!-- Button add Admin -->
         <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary">Add Food</a>

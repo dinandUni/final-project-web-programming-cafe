@@ -179,12 +179,22 @@ include('part/menu.php');
                 // 4. redirect with message
                 if($res2 == true){
                     $_SESSION['add'] = "<div class='success'>Food Added Successfully</div>";
-                    header('location:'.SITEURL.'admin/manage-food.php');
-                }
-                else{
+                    echo "
+                        <script>
+                            alert('Food Added Successfully');
+                            window.location.href = '".SITEURL."admin/manage-food.php';
+                        </script>
+                    ";
+                } else {
                     $_SESSION['add'] = "<div class='error'>Failed to Add Food</div>";
-                    header('location:'.SITEURL.'admin/manage-food.php');
+                    echo "
+                        <script>
+                            alert('Failed to Add Food');
+                            window.location.href = '".SITEURL."admin/manage-food.php';
+                        </script>
+                    ";
                 }
+                
             }
         ?>
     
